@@ -1,0 +1,87 @@
+:host {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.title {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .label {
+    margin: 0 10px;
+  }
+}
+
+a-input.passphrase {
+  margin: 50px auto 0;
+  max-width: 300px;
+  text-align: center;
+}
+
+a-button.make {
+  margin: 30px auto 0;
+  width: min-content;
+}
+
+.code-box {
+  margin-top: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+
+  legend {
+    font-size: 18px;
+    padding: 5px 10px 0;
+    border-radius: 5px;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+
+    .code {
+      word-break: break-all;
+      user-select: all;
+      margin-right: 5px;
+    }
+    a-button {
+      font-size: 26px;
+    }
+  }
+
+  &.secret {
+    background-color: black;
+    color: white;
+    legend {
+      background-color: black;
+    }
+    .code::selection {
+      // https://stackoverflow.com/questions/32820767/webkit-css-text-selection-styling-can-not-make-background-white
+      background-color: rgba(255, 255, 255, 0.996);
+      color: black;
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.copied {
+  animation: copied 0.1s 1;
+}
+
+@keyframes copied {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

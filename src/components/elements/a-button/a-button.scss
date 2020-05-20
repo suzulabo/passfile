@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+:host(.label) {
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 10px 20px;
+}
+
+:host([disabled]) {
+  opacity: 0.5;
+  cursor: default;
+}
+
+:host(:active:not([disabled])) {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}

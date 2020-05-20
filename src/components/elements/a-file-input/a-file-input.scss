@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px dashed black;
+  min-height: 100px;
+
+  a-button {
+    font-size: 36px;
+  }
+  .label {
+    font-size: 15px;
+    word-break: break-all;
+    color: var(--label-color, inherit);
+  }
+
+  &.reading {
+    a-button {
+      animation: spinY 1s linear infinite;
+    }
+  }
+}
+
+@keyframes spinY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-360deg);
+  }
+}
+
+#file_select_input {
+  display: none;
+}
