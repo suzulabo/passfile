@@ -1,0 +1,1 @@
+let s;const t=t=>{s=t},a=()=>s;export{a as g,t as s}

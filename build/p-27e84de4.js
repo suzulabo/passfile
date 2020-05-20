@@ -1,0 +1,1 @@
+const e=(e,r)=>new Promise((t,n)=>{const a=new FileReader;a.onload=e=>{t(new Uint8Array(e.target.result))},a.onerror=e=>{n(e.target.error)},a.onprogress=e=>{r&&r(e.loaded)},a.readAsArrayBuffer(e)}),r=e=>{if(!e)return"";const r=Math.floor(Math.log(e)/Math.log(1024));return Number((e/Math.pow(1024,r)).toFixed(2))+" "+["B","KiB","MiB","GiB","TiB"][r]};export{r as h,e as r}
