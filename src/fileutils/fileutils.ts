@@ -21,8 +21,11 @@ export const readFile = (f: Blob, progress?: (loaded: number) => void) => {
 https://stackoverflow.com/questions/10420352/converting-file-size-in-bytes-to-human-readable-string
 */
 export const humanFileSize = (size: number) => {
-  if (!size) {
+  if (size < 0) {
     return '';
+  }
+  if (size == 0) {
+    return '0 B';
   }
   const i = Math.floor(Math.log(size) / Math.log(1024));
   return (
