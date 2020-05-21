@@ -44,6 +44,10 @@ a-file-input {
     display: flex;
     align-items: center;
 
+    .name {
+      word-break: break-word;
+    }
+
     .size {
       margin: 0 5px;
       font-size: 15px;
@@ -51,18 +55,19 @@ a-file-input {
       white-space: nowrap;
     }
 
-    &:last-of-type {
-      border-bottom-width: 0;
+    a-button {
+      padding: 5px;
+      font-size: 24px;
     }
 
-    &:hover .name {
-      text-decoration: underline;
+    &:last-of-type {
+      border-bottom-width: 0;
     }
   }
 }
 
 .total-box {
-  margin-top: 30px;
+  margin-top: 20px;
   border-top: 1px solid black;
   padding-top: 10px;
   text-align: right;
