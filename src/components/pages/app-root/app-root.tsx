@@ -9,24 +9,24 @@ export class AppRoot {
   render() {
     return (
       <Host>
-        <stencil-router titleSuffix=" - Passfile">
+        <stencil-router titleSuffix=" - Passfile" root="/passfile/">
           <stencil-route-switch scrollTopOffset={0}>
-            <stencil-route url="/" component="app-home" exact={true} />
             <stencil-route
-              url="/gencode"
+              url="/gencode(|/)"
               component="app-gencode"
               exact={true}
             />
             <stencil-route
-              url="/encrypt"
+              url="/encrypt(|/)"
               component="app-encrypt"
               exact={true}
             />
             <stencil-route
-              url="/decrypt"
+              url="/decrypt(|/)"
               component="app-decrypt"
               exact={true}
             />
+            <stencil-route url="/" component="app-home" exact={true} />
           </stencil-route-switch>
         </stencil-router>
       </Host>
