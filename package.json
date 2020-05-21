@@ -10,7 +10,8 @@
     "start.static": "stencil build --dev --watch --serve --prerender",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "gh-pages": "stencil build --prerender && gh-pages -d www/passfile"
   },
   "devDependencies": {
     "@stencil/core": "^1.13.0",
@@ -20,6 +21,7 @@
     "@types/puppeteer": "2.0.1",
     "base32-decode": "^1.0.0",
     "base32-encode": "^1.1.1",
+    "gh-pages": "^2.2.0",
     "ionicons": "^5.0.1",
     "jest": "26.0.1",
     "jest-cli": "26.0.1",
