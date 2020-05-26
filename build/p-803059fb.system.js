@@ -1,0 +1,1 @@
+System.register([],(function(n){"use strict";return{execute:function(){var r;var e=n("s",(function(n){r=n}));var t=n("g",(function(){return r}));var u=function(){var n="/passfile/";if(n.endsWith("/")){return n.slice(0,-1)}else{return n}}();var i=n("n",(function(n){return u+n}))}}}));

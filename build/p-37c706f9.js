@@ -1,0 +1,1 @@
+let s;const a=a=>{s=a},e=()=>s,l="/passfile/".endsWith("/")?"/passfile/".slice(0,-1):"/passfile/",p=s=>l+s;export{e as g,p as n,a as s}
