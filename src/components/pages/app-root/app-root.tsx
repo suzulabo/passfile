@@ -1,4 +1,5 @@
 import { Component, h, Host } from '@stencil/core';
+import { normPath } from '../../../global/env';
 
 @Component({
   tag: 'app-root',
@@ -9,24 +10,28 @@ export class AppRoot {
   render() {
     return (
       <Host>
-        <stencil-router titleSuffix=" - Passfile" root="/passfile/">
+        <stencil-router titleSuffix=" - Passfile">
           <stencil-route-switch scrollTopOffset={0}>
             <stencil-route
-              url="/gencode(|/)"
+              url={normPath('/gencode/')}
               component="app-gencode"
               exact={true}
             />
             <stencil-route
-              url="/encrypt(|/)"
+              url={normPath('/encrypt/')}
               component="app-encrypt"
               exact={true}
             />
             <stencil-route
-              url="/decrypt(|/)"
+              url={normPath('/decrypt/')}
               component="app-decrypt"
               exact={true}
             />
-            <stencil-route url="/" component="app-home" exact={true} />
+            <stencil-route
+              url={normPath('/')}
+              component="app-home"
+              exact={true}
+            />
           </stencil-route-switch>
         </stencil-router>
       </Host>
