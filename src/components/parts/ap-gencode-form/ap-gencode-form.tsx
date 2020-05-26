@@ -46,8 +46,11 @@ export class GenCodeForm {
                   .closest('.code-box')
                   .querySelector<HTMLElement>('.code');
                 codeEl.classList.remove('copied');
-                void codeEl.offsetWidth;
-                codeEl.classList.add('copied');
+
+                // void codeEl.offsetWidth; <- It is removed when production build
+                if (!isNaN(codeEl.offsetWidth)) {
+                  codeEl.classList.add('copied');
+                }
               }}
             ></a-button>
           </div>
