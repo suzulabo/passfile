@@ -36,6 +36,11 @@ export class AppHome {
             </a-button>
           </stencil-route-link>
         </div>
+        <div class="footer">
+          <a href="https://github.com/suzulabo/passfile">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </div>
       </Host>
     );
   }
