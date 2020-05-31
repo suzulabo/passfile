@@ -6,7 +6,7 @@ Passfile is a simple file encryption/decryption web application that works in br
 
 ## Public-key authenti.. what?
 
-Sharing encription key is not easy.   
+Sharing encryption key is not easy.   
 In Passfile, 
 
 1. A recipient generates Public-Code and Secret-Code pair, then sending Public-Code to file sender.
